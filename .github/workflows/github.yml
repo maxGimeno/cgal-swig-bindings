@@ -1,7 +1,8 @@
 name: Windows Tests
 
 on: [push]
-
+  branches:
+      - master
 jobs:
   build:
     runs-on: windows-2016
