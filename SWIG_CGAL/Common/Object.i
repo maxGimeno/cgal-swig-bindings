@@ -16,6 +16,7 @@
   import CGAL.Kernel.Plane_3;
   import CGAL.Kernel.Ray_2;
   import CGAL.Kernel.Ray_3;
+  import CGAL.Kernel.Polygon_2;
 %}
 #endif
 
@@ -38,5 +39,6 @@ public:
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Plane_3)
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Ray_2)
   SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Ray_3)
+  SWIG_CGAL_DECLARE_FCT_IS_AND_GET(Polygon_2)
   SWIG_CGAL_FORWARD_CALL_0(bool,empty)
 };

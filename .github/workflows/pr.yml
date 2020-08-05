@@ -1,8 +1,7 @@
 name: Windows Tests
 
-on: [push]
-  branches:
-      - master
+on: [pull_request]
+
 jobs:
   build:
     runs-on: windows-2016
@@ -11,6 +10,7 @@ jobs:
       matrix:
         cgal_branch: [master]
         python_minor_version: [6, 7, 8]
+
 
     steps:
     - uses: actions/checkout@v1
@@ -123,8 +123,6 @@ jobs:
         for py_file in *.py; do
           python.exe $py_file || exit 1
         done
-        cd ../..
-        twine upload -r testpypi dist/*  -u "cgal" -p ${{ secrets.TPPPW }} --non-interactive --skip-existing
       shell: bash
 
 #    - name: Upload wheel
